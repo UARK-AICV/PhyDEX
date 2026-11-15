@@ -22,22 +22,24 @@ All site URLs are relative, so repository subpaths work. If keeping this folder 
 
 - `index.html`: research introduction, title, paper metadata, section text. The project name is used provisionally; replace the publication note with confirmed authors, paper, code, and dataset links when available.
 - `style.css`: colors, layout, mobile behavior, and scroll duration (`.sequence` height).
-- `app.js`: scroll frame mapping, bounded image cache, and gallery filters.
-- `assets/sequence.json`: ordered frame paths and recorded timestamps.
+- `app.js`: scroll-to-video mapping, coalesced seeking, and gallery filters.
+- `assets/playback.json`: video paths, frame count, and encoding frame rate.
 - `assets/camera.json`: exact camera pose, intrinsics, and rendering provenance.
 
-The opening still uses native 3840 × 2160 path tracing with 512 samples per pixel, 16 bounces, and OptiX denoising. The 150 motion frames use native 4K RTX lighting; gallery stills retain the supplied 2,048-sample renders.
+The opening and animation use the same native 3840 × 2160 RTX rendering and exposure. The fallback poster is extracted from the first encoded video frame, preventing a lighting change when scrolling starts. Gallery stills retain the supplied 2,048-sample renders.
 
-The browser keeps a bounded cache of decoded frames. Mobile devices load 1280px alternatives; desktop assets retain 3840 × 2160 resolution. Frames load near the current scroll position. With reduced motion enabled, the opening becomes a single still and the paper is immediately below it. Without JavaScript the poster and research text remain accessible.
+The browser preloads a seek-optimized H.264 video with a keyframe every four frames. Only one seek is active at a time; new scroll input replaces the pending destination. Mobile devices load a 1280px video; desktop playback retains 3840 × 2160 resolution. Slow connections can still delay uncached positions. With reduced motion enabled, the opening becomes a single still and the paper is immediately below it. Without JavaScript the poster and research text remain accessible.
 
 ## Source assets
 
 The gallery comes from `nine_combination_angle16_4k_20261114`. The animation restores chronological physical states from the cereal-box / wooden-tray episode (`demo_320`, batch_000001/run_000), using the relative angle-16 camera rule from the supplied target-extremes renders, then aiming 0.28 m left in the camera plane and widening the lens (0.78× focal length) to show more of the robot’s motion. This successful 10.48-second trajectory was selected for its shorter, more direct arm path. It does not interpolate stills or resimulate the trajectory. The original data and renders remain untouched outside this folder.
 
-To repackage a completed render, install Pillow and run:
+The throw from 8.3 seconds onward is sampled at 60 Hz from recorded physics states, versus roughly 14 Hz during the approach. Each encoded frame receives equal scroll distance, slowing the throw for inspection without synthesizing motion.
+
+To repackage a completed render, install FFmpeg and Pillow and run:
 
 ```bash
-python tools/prepare_assets.py --stills /path/to/nine_combination_angle16_4k_20261114 --sequence /path/to/completed/sequence
+python tools/prepare_playback.py --sequence /path/to/completed/sequence
 ```
 
-The input sequence directory must contain its render manifest and all referenced 4K PNGs. The packager writes WebP assets, a poster, and portable manifests; the website does not require the source dataset or simulation environment.
+The input sequence directory must contain its render manifest and all referenced 4K PNGs. The packager writes desktop and mobile MP4 files, a matching WebP poster, and portable manifests; the website does not require the source dataset or simulation environment.

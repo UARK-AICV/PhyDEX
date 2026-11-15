@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#171b18"><meta name="description" content="Extrinsic Dexterity — exploring robotic throwing across object dynamics and destination configurations.">
 <title>Extrinsic Dexterity</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
-<link rel="preload" as="image" href="assets/poster.webp">
+<link rel="preload" as="image" href="assets/poster-motion.webp">
 <script defer src="app.js"></script>
 </head>
 <body>
@@ -14,8 +14,8 @@
 <section class="sequence" id="top" aria-label="Scroll-controlled rendering of a recorded robotic throwing episode">
 <div class="stage">
 <div class="scene-window">
-<img class="poster" src="assets/poster.webp" alt="A robot arm throwing a cereal box into a wooden tray on a kitchen counter." fetchpriority="high" width="3840" height="2160">
-<canvas id="scene" aria-hidden="true"></canvas>
+<img class="poster" src="assets/poster-motion.webp" alt="A robot arm throwing a cereal box into a wooden tray on a kitchen counter." fetchpriority="high" width="3840" height="2160">
+<video id="scene" muted playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
 </div>
 <button class="scroll-cue" type="button" aria-label="Scroll down to replay the throw">
 <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5v21M7 17l9 9 9-9"/></svg>

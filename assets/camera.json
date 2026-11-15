@@ -1,0 +1,993 @@
+{
+  "resolution": [
+    3840,
+    2160
+  ],
+  "camera": "right",
+  "camera_source": "recorded right-camera calibration",
+  "position_world": [
+    2.581486648043014,
+    -4.278239240747739,
+    1.925614833831787
+  ],
+  "quaternion_ros": [
+    0.45617800425641414,
+    -0.8887610482183101,
+    0.03984046667492928,
+    -0.0204490786503834
+  ],
+  "original_intrinsics": [
+    [
+      191.12442016601562,
+      0.0,
+      176.0
+    ],
+    [
+      0.0,
+      191.12442016601562,
+      128.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "framing": "Angle 16 panned left 0.28m; focal length scaled to 0.78 to include the full robot swing; 16:9",
+  "renderer": "Isaac Sim RTX RaytracedLighting",
+  "quality": "Native 4K RTX rendering; 6 render updates per recorded state",
+  "physics_resimulated": false,
+  "moving_frames": "Chronological samples of recorded physical states; no interpolation or physics resimulation",
+  "frames": [
+    {
+      "src": "assets/sequence/demo_320/0000.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0000.webp",
+      "time_s": 0.0,
+      "state_index": 0
+    },
+    {
+      "src": "assets/sequence/demo_320/0001.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0001.webp",
+      "time_s": 0.06666666666666667,
+      "state_index": 16
+    },
+    {
+      "src": "assets/sequence/demo_320/0002.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0002.webp",
+      "time_s": 0.1375,
+      "state_index": 33
+    },
+    {
+      "src": "assets/sequence/demo_320/0003.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0003.webp",
+      "time_s": 0.20833333333333334,
+      "state_index": 50
+    },
+    {
+      "src": "assets/sequence/demo_320/0004.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0004.webp",
+      "time_s": 0.2791666666666667,
+      "state_index": 67
+    },
+    {
+      "src": "assets/sequence/demo_320/0005.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0005.webp",
+      "time_s": 0.35,
+      "state_index": 84
+    },
+    {
+      "src": "assets/sequence/demo_320/0006.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0006.webp",
+      "time_s": 0.42083333333333334,
+      "state_index": 101
+    },
+    {
+      "src": "assets/sequence/demo_320/0007.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0007.webp",
+      "time_s": 0.49166666666666664,
+      "state_index": 118
+    },
+    {
+      "src": "assets/sequence/demo_320/0008.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0008.webp",
+      "time_s": 0.5625,
+      "state_index": 135
+    },
+    {
+      "src": "assets/sequence/demo_320/0009.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0009.webp",
+      "time_s": 0.6291666666666667,
+      "state_index": 151
+    },
+    {
+      "src": "assets/sequence/demo_320/0010.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0010.webp",
+      "time_s": 0.7,
+      "state_index": 168
+    },
+    {
+      "src": "assets/sequence/demo_320/0011.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0011.webp",
+      "time_s": 0.7708333333333334,
+      "state_index": 185
+    },
+    {
+      "src": "assets/sequence/demo_320/0012.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0012.webp",
+      "time_s": 0.8416666666666667,
+      "state_index": 202
+    },
+    {
+      "src": "assets/sequence/demo_320/0013.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0013.webp",
+      "time_s": 0.9125,
+      "state_index": 219
+    },
+    {
+      "src": "assets/sequence/demo_320/0014.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0014.webp",
+      "time_s": 0.9833333333333333,
+      "state_index": 236
+    },
+    {
+      "src": "assets/sequence/demo_320/0015.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0015.webp",
+      "time_s": 1.0541666666666667,
+      "state_index": 253
+    },
+    {
+      "src": "assets/sequence/demo_320/0016.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0016.webp",
+      "time_s": 1.125,
+      "state_index": 270
+    },
+    {
+      "src": "assets/sequence/demo_320/0017.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0017.webp",
+      "time_s": 1.1916666666666667,
+      "state_index": 286
+    },
+    {
+      "src": "assets/sequence/demo_320/0018.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0018.webp",
+      "time_s": 1.2625,
+      "state_index": 303
+    },
+    {
+      "src": "assets/sequence/demo_320/0019.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0019.webp",
+      "time_s": 1.3333333333333333,
+      "state_index": 320
+    },
+    {
+      "src": "assets/sequence/demo_320/0020.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0020.webp",
+      "time_s": 1.4041666666666666,
+      "state_index": 337
+    },
+    {
+      "src": "assets/sequence/demo_320/0021.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0021.webp",
+      "time_s": 1.475,
+      "state_index": 354
+    },
+    {
+      "src": "assets/sequence/demo_320/0022.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0022.webp",
+      "time_s": 1.5458333333333334,
+      "state_index": 371
+    },
+    {
+      "src": "assets/sequence/demo_320/0023.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0023.webp",
+      "time_s": 1.6166666666666667,
+      "state_index": 388
+    },
+    {
+      "src": "assets/sequence/demo_320/0024.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0024.webp",
+      "time_s": 1.6875,
+      "state_index": 405
+    },
+    {
+      "src": "assets/sequence/demo_320/0025.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0025.webp",
+      "time_s": 1.7541666666666667,
+      "state_index": 421
+    },
+    {
+      "src": "assets/sequence/demo_320/0026.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0026.webp",
+      "time_s": 1.825,
+      "state_index": 438
+    },
+    {
+      "src": "assets/sequence/demo_320/0027.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0027.webp",
+      "time_s": 1.8958333333333333,
+      "state_index": 455
+    },
+    {
+      "src": "assets/sequence/demo_320/0028.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0028.webp",
+      "time_s": 1.9666666666666666,
+      "state_index": 472
+    },
+    {
+      "src": "assets/sequence/demo_320/0029.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0029.webp",
+      "time_s": 2.0375,
+      "state_index": 489
+    },
+    {
+      "src": "assets/sequence/demo_320/0030.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0030.webp",
+      "time_s": 2.1083333333333334,
+      "state_index": 506
+    },
+    {
+      "src": "assets/sequence/demo_320/0031.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0031.webp",
+      "time_s": 2.1791666666666667,
+      "state_index": 523
+    },
+    {
+      "src": "assets/sequence/demo_320/0032.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0032.webp",
+      "time_s": 2.25,
+      "state_index": 540
+    },
+    {
+      "src": "assets/sequence/demo_320/0033.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0033.webp",
+      "time_s": 2.3208333333333333,
+      "state_index": 557
+    },
+    {
+      "src": "assets/sequence/demo_320/0034.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0034.webp",
+      "time_s": 2.3875,
+      "state_index": 573
+    },
+    {
+      "src": "assets/sequence/demo_320/0035.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0035.webp",
+      "time_s": 2.4583333333333335,
+      "state_index": 590
+    },
+    {
+      "src": "assets/sequence/demo_320/0036.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0036.webp",
+      "time_s": 2.529166666666667,
+      "state_index": 607
+    },
+    {
+      "src": "assets/sequence/demo_320/0037.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0037.webp",
+      "time_s": 2.6,
+      "state_index": 624
+    },
+    {
+      "src": "assets/sequence/demo_320/0038.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0038.webp",
+      "time_s": 2.6708333333333334,
+      "state_index": 641
+    },
+    {
+      "src": "assets/sequence/demo_320/0039.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0039.webp",
+      "time_s": 2.7416666666666667,
+      "state_index": 658
+    },
+    {
+      "src": "assets/sequence/demo_320/0040.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0040.webp",
+      "time_s": 2.8125,
+      "state_index": 675
+    },
+    {
+      "src": "assets/sequence/demo_320/0041.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0041.webp",
+      "time_s": 2.8833333333333333,
+      "state_index": 692
+    },
+    {
+      "src": "assets/sequence/demo_320/0042.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0042.webp",
+      "time_s": 2.95,
+      "state_index": 708
+    },
+    {
+      "src": "assets/sequence/demo_320/0043.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0043.webp",
+      "time_s": 3.0208333333333335,
+      "state_index": 725
+    },
+    {
+      "src": "assets/sequence/demo_320/0044.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0044.webp",
+      "time_s": 3.091666666666667,
+      "state_index": 742
+    },
+    {
+      "src": "assets/sequence/demo_320/0045.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0045.webp",
+      "time_s": 3.1625,
+      "state_index": 759
+    },
+    {
+      "src": "assets/sequence/demo_320/0046.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0046.webp",
+      "time_s": 3.2333333333333334,
+      "state_index": 776
+    },
+    {
+      "src": "assets/sequence/demo_320/0047.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0047.webp",
+      "time_s": 3.3041666666666667,
+      "state_index": 793
+    },
+    {
+      "src": "assets/sequence/demo_320/0048.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0048.webp",
+      "time_s": 3.375,
+      "state_index": 810
+    },
+    {
+      "src": "assets/sequence/demo_320/0049.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0049.webp",
+      "time_s": 3.4458333333333333,
+      "state_index": 827
+    },
+    {
+      "src": "assets/sequence/demo_320/0050.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0050.webp",
+      "time_s": 3.5124999999999997,
+      "state_index": 843
+    },
+    {
+      "src": "assets/sequence/demo_320/0051.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0051.webp",
+      "time_s": 3.5833333333333335,
+      "state_index": 860
+    },
+    {
+      "src": "assets/sequence/demo_320/0052.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0052.webp",
+      "time_s": 3.654166666666667,
+      "state_index": 877
+    },
+    {
+      "src": "assets/sequence/demo_320/0053.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0053.webp",
+      "time_s": 3.725,
+      "state_index": 894
+    },
+    {
+      "src": "assets/sequence/demo_320/0054.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0054.webp",
+      "time_s": 3.7958333333333334,
+      "state_index": 911
+    },
+    {
+      "src": "assets/sequence/demo_320/0055.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0055.webp",
+      "time_s": 3.8666666666666667,
+      "state_index": 928
+    },
+    {
+      "src": "assets/sequence/demo_320/0056.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0056.webp",
+      "time_s": 3.9375,
+      "state_index": 945
+    },
+    {
+      "src": "assets/sequence/demo_320/0057.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0057.webp",
+      "time_s": 4.008333333333333,
+      "state_index": 962
+    },
+    {
+      "src": "assets/sequence/demo_320/0058.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0058.webp",
+      "time_s": 4.075,
+      "state_index": 978
+    },
+    {
+      "src": "assets/sequence/demo_320/0059.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0059.webp",
+      "time_s": 4.145833333333333,
+      "state_index": 995
+    },
+    {
+      "src": "assets/sequence/demo_320/0060.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0060.webp",
+      "time_s": 4.216666666666667,
+      "state_index": 1012
+    },
+    {
+      "src": "assets/sequence/demo_320/0061.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0061.webp",
+      "time_s": 4.2875,
+      "state_index": 1029
+    },
+    {
+      "src": "assets/sequence/demo_320/0062.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0062.webp",
+      "time_s": 4.358333333333333,
+      "state_index": 1046
+    },
+    {
+      "src": "assets/sequence/demo_320/0063.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0063.webp",
+      "time_s": 4.429166666666666,
+      "state_index": 1063
+    },
+    {
+      "src": "assets/sequence/demo_320/0064.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0064.webp",
+      "time_s": 4.5,
+      "state_index": 1080
+    },
+    {
+      "src": "assets/sequence/demo_320/0065.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0065.webp",
+      "time_s": 4.570833333333333,
+      "state_index": 1097
+    },
+    {
+      "src": "assets/sequence/demo_320/0066.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0066.webp",
+      "time_s": 4.641666666666667,
+      "state_index": 1114
+    },
+    {
+      "src": "assets/sequence/demo_320/0067.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0067.webp",
+      "time_s": 4.708333333333333,
+      "state_index": 1130
+    },
+    {
+      "src": "assets/sequence/demo_320/0068.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0068.webp",
+      "time_s": 4.779166666666667,
+      "state_index": 1147
+    },
+    {
+      "src": "assets/sequence/demo_320/0069.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0069.webp",
+      "time_s": 4.85,
+      "state_index": 1164
+    },
+    {
+      "src": "assets/sequence/demo_320/0070.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0070.webp",
+      "time_s": 4.920833333333333,
+      "state_index": 1181
+    },
+    {
+      "src": "assets/sequence/demo_320/0071.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0071.webp",
+      "time_s": 4.991666666666666,
+      "state_index": 1198
+    },
+    {
+      "src": "assets/sequence/demo_320/0072.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0072.webp",
+      "time_s": 5.0625,
+      "state_index": 1215
+    },
+    {
+      "src": "assets/sequence/demo_320/0073.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0073.webp",
+      "time_s": 5.133333333333333,
+      "state_index": 1232
+    },
+    {
+      "src": "assets/sequence/demo_320/0074.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0074.webp",
+      "time_s": 5.204166666666667,
+      "state_index": 1249
+    },
+    {
+      "src": "assets/sequence/demo_320/0075.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0075.webp",
+      "time_s": 5.270833333333333,
+      "state_index": 1265
+    },
+    {
+      "src": "assets/sequence/demo_320/0076.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0076.webp",
+      "time_s": 5.341666666666667,
+      "state_index": 1282
+    },
+    {
+      "src": "assets/sequence/demo_320/0077.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0077.webp",
+      "time_s": 5.4125,
+      "state_index": 1299
+    },
+    {
+      "src": "assets/sequence/demo_320/0078.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0078.webp",
+      "time_s": 5.483333333333333,
+      "state_index": 1316
+    },
+    {
+      "src": "assets/sequence/demo_320/0079.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0079.webp",
+      "time_s": 5.554166666666666,
+      "state_index": 1333
+    },
+    {
+      "src": "assets/sequence/demo_320/0080.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0080.webp",
+      "time_s": 5.625,
+      "state_index": 1350
+    },
+    {
+      "src": "assets/sequence/demo_320/0081.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0081.webp",
+      "time_s": 5.695833333333333,
+      "state_index": 1367
+    },
+    {
+      "src": "assets/sequence/demo_320/0082.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0082.webp",
+      "time_s": 5.766666666666667,
+      "state_index": 1384
+    },
+    {
+      "src": "assets/sequence/demo_320/0083.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0083.webp",
+      "time_s": 5.833333333333333,
+      "state_index": 1400
+    },
+    {
+      "src": "assets/sequence/demo_320/0084.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0084.webp",
+      "time_s": 5.904166666666667,
+      "state_index": 1417
+    },
+    {
+      "src": "assets/sequence/demo_320/0085.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0085.webp",
+      "time_s": 5.975,
+      "state_index": 1434
+    },
+    {
+      "src": "assets/sequence/demo_320/0086.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0086.webp",
+      "time_s": 6.045833333333333,
+      "state_index": 1451
+    },
+    {
+      "src": "assets/sequence/demo_320/0087.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0087.webp",
+      "time_s": 6.116666666666666,
+      "state_index": 1468
+    },
+    {
+      "src": "assets/sequence/demo_320/0088.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0088.webp",
+      "time_s": 6.1875,
+      "state_index": 1485
+    },
+    {
+      "src": "assets/sequence/demo_320/0089.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0089.webp",
+      "time_s": 6.258333333333333,
+      "state_index": 1502
+    },
+    {
+      "src": "assets/sequence/demo_320/0090.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0090.webp",
+      "time_s": 6.329166666666667,
+      "state_index": 1519
+    },
+    {
+      "src": "assets/sequence/demo_320/0091.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0091.webp",
+      "time_s": 6.4,
+      "state_index": 1536
+    },
+    {
+      "src": "assets/sequence/demo_320/0092.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0092.webp",
+      "time_s": 6.466666666666667,
+      "state_index": 1552
+    },
+    {
+      "src": "assets/sequence/demo_320/0093.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0093.webp",
+      "time_s": 6.5375,
+      "state_index": 1569
+    },
+    {
+      "src": "assets/sequence/demo_320/0094.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0094.webp",
+      "time_s": 6.608333333333333,
+      "state_index": 1586
+    },
+    {
+      "src": "assets/sequence/demo_320/0095.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0095.webp",
+      "time_s": 6.679166666666666,
+      "state_index": 1603
+    },
+    {
+      "src": "assets/sequence/demo_320/0096.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0096.webp",
+      "time_s": 6.75,
+      "state_index": 1620
+    },
+    {
+      "src": "assets/sequence/demo_320/0097.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0097.webp",
+      "time_s": 6.820833333333333,
+      "state_index": 1637
+    },
+    {
+      "src": "assets/sequence/demo_320/0098.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0098.webp",
+      "time_s": 6.891666666666667,
+      "state_index": 1654
+    },
+    {
+      "src": "assets/sequence/demo_320/0099.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0099.webp",
+      "time_s": 6.9624999999999995,
+      "state_index": 1671
+    },
+    {
+      "src": "assets/sequence/demo_320/0100.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0100.webp",
+      "time_s": 7.029166666666667,
+      "state_index": 1687
+    },
+    {
+      "src": "assets/sequence/demo_320/0101.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0101.webp",
+      "time_s": 7.1,
+      "state_index": 1704
+    },
+    {
+      "src": "assets/sequence/demo_320/0102.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0102.webp",
+      "time_s": 7.170833333333333,
+      "state_index": 1721
+    },
+    {
+      "src": "assets/sequence/demo_320/0103.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0103.webp",
+      "time_s": 7.241666666666666,
+      "state_index": 1738
+    },
+    {
+      "src": "assets/sequence/demo_320/0104.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0104.webp",
+      "time_s": 7.3125,
+      "state_index": 1755
+    },
+    {
+      "src": "assets/sequence/demo_320/0105.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0105.webp",
+      "time_s": 7.383333333333333,
+      "state_index": 1772
+    },
+    {
+      "src": "assets/sequence/demo_320/0106.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0106.webp",
+      "time_s": 7.454166666666667,
+      "state_index": 1789
+    },
+    {
+      "src": "assets/sequence/demo_320/0107.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0107.webp",
+      "time_s": 7.5249999999999995,
+      "state_index": 1806
+    },
+    {
+      "src": "assets/sequence/demo_320/0108.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0108.webp",
+      "time_s": 7.591666666666667,
+      "state_index": 1822
+    },
+    {
+      "src": "assets/sequence/demo_320/0109.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0109.webp",
+      "time_s": 7.6625,
+      "state_index": 1839
+    },
+    {
+      "src": "assets/sequence/demo_320/0110.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0110.webp",
+      "time_s": 7.733333333333333,
+      "state_index": 1856
+    },
+    {
+      "src": "assets/sequence/demo_320/0111.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0111.webp",
+      "time_s": 7.804166666666666,
+      "state_index": 1873
+    },
+    {
+      "src": "assets/sequence/demo_320/0112.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0112.webp",
+      "time_s": 7.875,
+      "state_index": 1890
+    },
+    {
+      "src": "assets/sequence/demo_320/0113.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0113.webp",
+      "time_s": 7.945833333333333,
+      "state_index": 1907
+    },
+    {
+      "src": "assets/sequence/demo_320/0114.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0114.webp",
+      "time_s": 8.016666666666666,
+      "state_index": 1924
+    },
+    {
+      "src": "assets/sequence/demo_320/0115.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0115.webp",
+      "time_s": 8.0875,
+      "state_index": 1941
+    },
+    {
+      "src": "assets/sequence/demo_320/0116.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0116.webp",
+      "time_s": 8.154166666666667,
+      "state_index": 1957
+    },
+    {
+      "src": "assets/sequence/demo_320/0117.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0117.webp",
+      "time_s": 8.225,
+      "state_index": 1974
+    },
+    {
+      "src": "assets/sequence/demo_320/0118.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0118.webp",
+      "time_s": 8.295833333333333,
+      "state_index": 1991
+    },
+    {
+      "src": "assets/sequence/demo_320/0119.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0119.webp",
+      "time_s": 8.366666666666667,
+      "state_index": 2008
+    },
+    {
+      "src": "assets/sequence/demo_320/0120.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0120.webp",
+      "time_s": 8.4375,
+      "state_index": 2025
+    },
+    {
+      "src": "assets/sequence/demo_320/0121.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0121.webp",
+      "time_s": 8.508333333333333,
+      "state_index": 2042
+    },
+    {
+      "src": "assets/sequence/demo_320/0122.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0122.webp",
+      "time_s": 8.579166666666666,
+      "state_index": 2059
+    },
+    {
+      "src": "assets/sequence/demo_320/0123.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0123.webp",
+      "time_s": 8.65,
+      "state_index": 2076
+    },
+    {
+      "src": "assets/sequence/demo_320/0124.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0124.webp",
+      "time_s": 8.720833333333333,
+      "state_index": 2093
+    },
+    {
+      "src": "assets/sequence/demo_320/0125.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0125.webp",
+      "time_s": 8.7875,
+      "state_index": 2109
+    },
+    {
+      "src": "assets/sequence/demo_320/0126.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0126.webp",
+      "time_s": 8.858333333333333,
+      "state_index": 2126
+    },
+    {
+      "src": "assets/sequence/demo_320/0127.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0127.webp",
+      "time_s": 8.929166666666667,
+      "state_index": 2143
+    },
+    {
+      "src": "assets/sequence/demo_320/0128.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0128.webp",
+      "time_s": 9.0,
+      "state_index": 2160
+    },
+    {
+      "src": "assets/sequence/demo_320/0129.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0129.webp",
+      "time_s": 9.070833333333333,
+      "state_index": 2177
+    },
+    {
+      "src": "assets/sequence/demo_320/0130.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0130.webp",
+      "time_s": 9.141666666666666,
+      "state_index": 2194
+    },
+    {
+      "src": "assets/sequence/demo_320/0131.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0131.webp",
+      "time_s": 9.2125,
+      "state_index": 2211
+    },
+    {
+      "src": "assets/sequence/demo_320/0132.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0132.webp",
+      "time_s": 9.283333333333333,
+      "state_index": 2228
+    },
+    {
+      "src": "assets/sequence/demo_320/0133.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0133.webp",
+      "time_s": 9.35,
+      "state_index": 2244
+    },
+    {
+      "src": "assets/sequence/demo_320/0134.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0134.webp",
+      "time_s": 9.420833333333333,
+      "state_index": 2261
+    },
+    {
+      "src": "assets/sequence/demo_320/0135.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0135.webp",
+      "time_s": 9.491666666666667,
+      "state_index": 2278
+    },
+    {
+      "src": "assets/sequence/demo_320/0136.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0136.webp",
+      "time_s": 9.5625,
+      "state_index": 2295
+    },
+    {
+      "src": "assets/sequence/demo_320/0137.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0137.webp",
+      "time_s": 9.633333333333333,
+      "state_index": 2312
+    },
+    {
+      "src": "assets/sequence/demo_320/0138.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0138.webp",
+      "time_s": 9.704166666666666,
+      "state_index": 2329
+    },
+    {
+      "src": "assets/sequence/demo_320/0139.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0139.webp",
+      "time_s": 9.775,
+      "state_index": 2346
+    },
+    {
+      "src": "assets/sequence/demo_320/0140.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0140.webp",
+      "time_s": 9.845833333333333,
+      "state_index": 2363
+    },
+    {
+      "src": "assets/sequence/demo_320/0141.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0141.webp",
+      "time_s": 9.9125,
+      "state_index": 2379
+    },
+    {
+      "src": "assets/sequence/demo_320/0142.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0142.webp",
+      "time_s": 9.983333333333333,
+      "state_index": 2396
+    },
+    {
+      "src": "assets/sequence/demo_320/0143.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0143.webp",
+      "time_s": 10.054166666666667,
+      "state_index": 2413
+    },
+    {
+      "src": "assets/sequence/demo_320/0144.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0144.webp",
+      "time_s": 10.125,
+      "state_index": 2430
+    },
+    {
+      "src": "assets/sequence/demo_320/0145.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0145.webp",
+      "time_s": 10.195833333333333,
+      "state_index": 2447
+    },
+    {
+      "src": "assets/sequence/demo_320/0146.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0146.webp",
+      "time_s": 10.266666666666666,
+      "state_index": 2464
+    },
+    {
+      "src": "assets/sequence/demo_320/0147.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0147.webp",
+      "time_s": 10.3375,
+      "state_index": 2481
+    },
+    {
+      "src": "assets/sequence/demo_320/0148.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0148.webp",
+      "time_s": 10.408333333333333,
+      "state_index": 2498
+    },
+    {
+      "src": "assets/sequence/demo_320/0149.webp",
+      "mobile": "assets/sequence/demo_320/mobile/0149.webp",
+      "time_s": 10.479166666666666,
+      "state_index": 2515
+    }
+  ],
+  "camera_angle": 16,
+  "angle_rule": {
+    "shift_right_m": 0.8,
+    "distance_fraction": 0.9,
+    "look_at_left_offset_m": 0.28,
+    "focal_length_scale": 0.78
+  },
+  "original_camera_position_world": [
+    1.865342617034912,
+    -3.80572509765625,
+    2.008349895477295
+  ],
+  "target_world": [
+    2.6743419099019676,
+    -3.2446129560716623,
+    1.180999994277954
+  ],
+  "usd_transform": [
+    [
+      0.9959891447949487,
+      -0.08947414962226227,
+      6.93889390390723e-18,
+      0.0
+    ],
+    [
+      0.05216047007180491,
+      0.5806287312955178,
+      0.812495884147142,
+      0.0
+    ],
+    [
+      -0.07269737830565365,
+      -0.8092370808011276,
+      0.582966927229971,
+      0.0
+    ],
+    [
+      2.5814866480430143,
+      -4.278239240747739,
+      1.925614833831787,
+      1.0
+    ]
+  ],
+  "recording": {
+    "native_episode": "demo_320",
+    "condition_key": "rigid_objects_5000_parallel128_ik_banks/batch_000001/run_000/condition_56",
+    "category": "cereal box",
+    "task": "Lift the cereal box and throw it into the tray."
+  },
+  "poster_rendering": "3840x2160 RTX PathTracing, 512 spp, 16 bounces, OptiX denoising"
+}

@@ -14,6 +14,7 @@ async function reveal() {
   try { await poster.decode(); } catch (_) {}
   sceneWindow.classList.add('revealed');
   if (reducedMotion.matches) finishReveal();
+  else setTimeout(showOpeningControls, 1000);
 }
 const introHint = document.querySelector('#intro-hint');
 let hintTimer;
@@ -22,9 +23,14 @@ function dismissHint() {
   introHint.inert = true;
   clearTimeout(hintTimer);
 }
+function showOpeningControls() {
+  cue.classList.add('visible');
+  document.querySelector('.site-header').classList.add('visible');
+}
 function finishReveal() {
   if (!opened) hintTimer = setTimeout(dismissHint, 4000);
   opened = true;
+  showOpeningControls();
   schedule();
 }
 sceneWindow.addEventListener('animationend', finishReveal, {once:true});

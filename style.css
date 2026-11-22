@@ -343,10 +343,10 @@ footer{
 /* Scroll invitation on the opening: fades in as the iris opens, independent of JS timing. */
 .scroll-cue { width: 44px; height: 44px; margin-left: -22px; background: #0008; border-color: #ffffffd0; box-shadow: 0 2px 14px #0006; bottom: max(5vh,24px); transition: opacity .4s, visibility .4s; }
 .scroll-cue svg { width: 20px; height: 20px; }
-.scene-window.revealed ~ .scroll-cue { animation: cue-in .8s ease 2.2s both; }
+
 .scroll-cue.scrolled { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
 @keyframes cue-in { from { opacity: 0; visibility: hidden; } to { opacity: 1; visibility: visible; pointer-events: auto; } }
-@media (prefers-reduced-motion: reduce) { .scene-window.revealed ~ .scroll-cue { animation: none; opacity: 1; visibility: visible; pointer-events: auto; } }
+
 /* Smaller arrow and a soft bottom shade on the interactive scene. */
 .scroll-cue { width: 34px; height: 34px; margin-left: -17px; bottom: max(4vh,20px); }
 .scroll-cue svg { width: 16px; height: 16px; }
@@ -521,7 +521,7 @@ footer{
 .section-nav a:hover, .section-nav a:focus-visible { color: white; text-decoration: underline; text-underline-offset: 6px; }
 .intro-hint { position: absolute; inset: 0; z-index: 1; background: #0003; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); pointer-events: none; transition: opacity .6s, visibility .6s; }
 .intro-hint.dismissed { opacity: 0; visibility: hidden; }
-.scroll-cue { z-index: 2; top: 50%; bottom: auto; left: 50%; width: 80px; height: 80px; margin: 0; transform: translate(-50%, -50%); opacity: 1; visibility: visible; pointer-events: auto; }
+.scroll-cue { z-index: 2; top: 50%; bottom: auto; left: 50%; width: 80px; height: 80px; margin: 0; transform: translate(-50%, -50%); opacity: 0; visibility: hidden; pointer-events: none; }
 .scroll-cue svg { width: 44px; height: 44px; }
 .scene-window.revealed ~ .scroll-cue { animation: none; }
 @media(max-width:600px) {
@@ -534,3 +534,9 @@ footer{
 }
 
 .scroll-cue-label { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 16px; font-weight: 500; color: white; text-shadow: 0 2px 8px #000; }
+
+.site-header { opacity: 0; visibility: hidden; transform: translateY(-12px); transition: opacity .6s ease, transform .6s ease, visibility .6s; }
+.site-header.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+@media(prefers-reduced-motion:reduce) {
+  .site-header { transition: none; transform: none; }
+}

@@ -1,3 +1,6 @@
 .DS_Store
 __pycache__/
 node_modules/
+
+# Original capture footage stays local; the site uses assets/real/*.mp4.
+assets/real-experiments/

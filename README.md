@@ -22,13 +22,15 @@ All site URLs are relative, so repository subpaths work. If keeping this folder 
 
 - `index.html`: research introduction, title, paper metadata, section text. The project name is used provisionally; replace the publication note with confirmed authors, paper, code, and dataset links when available.
 - `style.css`: colors, layout, mobile behavior, and scroll duration (`.sequence` height).
-- `app.js`: scroll-to-video mapping, coalesced seeking, and gallery filters.
+- `app.js`: scroll-to-video mapping, video galleries, animated evaluation charts, and citation copy.
+- `assets/task-gallery-videos/`: nine task videos and matching preview images.
+- `assets/real/`: web-ready real-world videos and previews. Original `.mov` recordings in `assets/real-experiments/` remain local and are excluded from Git.
 - `assets/playback.json`: video paths, frame count, and encoding frame rate.
 - `assets/camera.json`: exact camera pose, intrinsics, and rendering provenance.
 
-The opening and animation use the same native 3840 × 2160 RTX rendering and exposure. The fallback poster is extracted from the first encoded video frame, preventing a lighting change when scrolling starts. Gallery stills retain the supplied 2,048-sample renders.
+The opening and animation use the same source 3840 × 2160 RTX rendering and exposure; scroll playback uses downscaled proxies. The fallback poster is extracted from the first encoded video frame, preventing a lighting change when scrolling starts. Gallery stills retain the supplied 2,048-sample renders.
 
-The browser preloads a seek-optimized H.264 video with a keyframe every four frames. Only one seek is active at a time; new scroll input replaces the pending destination. Mobile devices load a 1280px video; desktop playback retains 3840 × 2160 resolution. Slow connections can still delay uncached positions. With reduced motion enabled, the opening becomes a single still and the paper is immediately below it. Without JavaScript the poster and research text remain accessible.
+The browser preloads an H.264 scrubbing proxy with every frame encoded independently, avoiding dependent-frame decoding on random seeks. Only one seek is active at a time; new scroll input replaces the pending destination, and the next seek starts immediately when the previous one finishes. Mobile devices load a 1280px proxy and desktops a 1920px proxy; the original 3840 × 2160 video remains available in the assets. Slow connections can still delay uncached positions. With reduced motion enabled, the opening becomes a single still and the paper is immediately below it. Without JavaScript the poster and research text remain accessible.
 
 ## Source assets
 

@@ -1094,6 +1094,6 @@
     "task": "Lift the cereal box and throw it into the tray."
   },
   "opening_rendering": "Decoded first motion frame; identical renderer, lighting and exposure throughout",
-  "playback_encoding": "Native 4K H.264 CRF 18, keyframe every four frames; 1280px mobile alternative",
+  "playback_encoding": "Original 4K H.264 retained; 1920px desktop and 1280px mobile all-intra CRF 20 scroll proxies",
   "scroll_timing": "Equal scroll distance per frame; dense 60Hz recorded-state sampling from 8.3s through landing gives the throw more scroll distance"
 }

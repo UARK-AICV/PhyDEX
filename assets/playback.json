@@ -1,6 +1,8 @@
 {
   "src": "assets/throw-4k.mp4",
   "mobile": "assets/throw-mobile.mp4",
+  "scrub": "assets/throw-scrub.mp4",
+  "scrubMobile": "assets/throw-scrub-mobile.mp4",
   "fps": 30,
   "frameCount": 251
 }

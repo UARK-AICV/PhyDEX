@@ -15,9 +15,21 @@ async function reveal() {
   sceneWindow.classList.add('revealed');
   if (reducedMotion.matches) finishReveal();
 }
-function finishReveal() { opened = true; schedule(); }
+const introHint = document.querySelector('#intro-hint');
+let hintTimer;
+function dismissHint() {
+  introHint.classList.add('dismissed');
+  introHint.inert = true;
+  clearTimeout(hintTimer);
+}
+function finishReveal() {
+  if (!opened) hintTimer = setTimeout(dismissHint, 4000);
+  opened = true;
+  schedule();
+}
 sceneWindow.addEventListener('animationend', finishReveal, {once:true});
 cue.addEventListener('click', () => {
+  dismissHint();
   window.scrollBy({top: innerHeight * .7, behavior: reducedMotion.matches ? 'instant' : 'smooth'});
 });
 function seekLatest() {
@@ -58,6 +70,7 @@ function update() {
   const progress = reducedMotion.matches ? 0 : Math.min(1, Math.max(0, -rect.top / Math.max(1, sequence.offsetHeight - innerHeight)));
   // Hide the arrow once the visitor has started scrolling the throw.
   const scrolled = progress > .02;
+  if (window.scrollY > 40) dismissHint();
   cue.classList.toggle('scrolled', scrolled);
   cue.tabIndex = scrolled ? -1 : 0;
   desired = Math.round(progress * Math.max(0, frameCount - 1));

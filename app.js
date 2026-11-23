@@ -5,6 +5,13 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const sceneWindow = document.querySelector('.scene-window');
 const cue = document.querySelector('.scroll-cue');
 const poster = document.querySelector('.poster');
+const openingLoader = document.querySelector('#opening-loader');
+const openingProgress = document.querySelector('#opening-progress');
+const downloadProgress = document.querySelector('#opening-download');
+let openingObjectURL;
+let openingDownloadStarted = false;
+let controlsAllowed = false;
+
 let opened = false, scheduled = false, desired = 0, displayed = 0;
 let frameCount = Number(video.dataset.frameCount), fps = Number(video.dataset.fps), seekingFrame = null, ready = false;
 let revealStarted = false;
@@ -24,11 +31,12 @@ function dismissHint() {
   clearTimeout(hintTimer);
 }
 function showOpeningControls() {
-  cue.classList.add('visible');
+  controlsAllowed = true;
+  cue.classList.toggle('visible', ready || reducedMotion.matches);
   document.querySelector('.site-header').classList.add('visible');
 }
 function finishReveal() {
-  if (!opened) hintTimer = setTimeout(dismissHint, 4000);
+  if (!opened && (ready || reducedMotion.matches)) hintTimer = setTimeout(dismissHint, 4000);
   opened = true;
   showOpeningControls();
   schedule();
@@ -66,10 +74,13 @@ video.addEventListener('canplay', schedule);
 video.addEventListener('loadeddata', () => {
   ready = true;
   video.classList.add('ready');
+  openingLoader.hidden = true;
+  if (controlsAllowed) showOpeningControls();
+  if (opened) hintTimer = setTimeout(dismissHint, 4000);
   reveal();
   schedule();
 });
-video.addEventListener('error', () => { sequence.classList.add('sequence-unavailable'); reveal(); });
+video.addEventListener('error', openingFailed);
 function update() {
   scheduled = false;
   const rect = sequence.getBoundingClientRect();
@@ -86,14 +97,61 @@ function update() {
 function schedule() { if (!scheduled) { scheduled = true; requestAnimationFrame(update); } }
 addEventListener('scroll', schedule, {passive:true});
 addEventListener('resize', schedule);
-reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) finishReveal(); schedule(); });
-// Reveal the lightweight poster immediately; video loads in parallel from HTML.
-// Handle a cached video that became ready before this deferred script ran.
-if (video.readyState >= 2) {
-  ready = true;
-  video.classList.add('ready');
+reducedMotion.addEventListener('change', () => {
+  if (reducedMotion.matches) { openingLoader.hidden = true; finishReveal(); }
+  else { preloadOpening(); openingLoader.hidden = ready || sequence.classList.contains('sequence-unavailable'); }
+  showOpeningControls();
+  schedule();
+});
+// Fetch the entire seek-friendly video before attaching it. A local Blob URL
+// ensures later scroll seeks never have to wait for HTTP range downloads.
+function openingFailed() {
+  openingLoader.hidden = true;
+  sequence.classList.add('sequence-unavailable');
+  dismissHint();
+  showOpeningControls();
+  reveal();
+}
+async function preloadOpening() {
+  if (reducedMotion.matches || openingDownloadStarted) return;
+  openingDownloadStarted = true;
+  openingLoader.hidden = false;
+  try {
+    const source = matchMedia('(max-width: 700px)').matches ? video.dataset.mobile : video.dataset.src;
+    const response = await fetch(source);
+    if (!response.ok) throw Error('Opening video unavailable');
+    const total = Number(response.headers.get('content-length'));
+    let blob;
+    if (response.body && total > 0) {
+      const reader = response.body.getReader();
+      const chunks = [];
+      let received = 0;
+      for (;;) {
+        const {done, value} = await reader.read();
+        if (done) break;
+        chunks.push(value);
+        received += value.length;
+        const percent = Math.min(100, Math.round(received / total * 100));
+        openingProgress.textContent = `${percent}%`;
+        downloadProgress.value = percent;
+      }
+      blob = new Blob(chunks, {type: 'video/mp4'});
+    } else {
+      downloadProgress.removeAttribute('value');
+      openingProgress.textContent = '';
+      blob = await response.blob();
+    }
+    openingProgress.textContent = '100%';
+    openingObjectURL = URL.createObjectURL(blob);
+    video.src = openingObjectURL;
+    video.load();
+  } catch (_) { openingFailed(); }
 }
 reveal();
+preloadOpening();
+addEventListener('pagehide', event => {
+  if (!event.persisted && openingObjectURL) URL.revokeObjectURL(openingObjectURL);
+});
 const families = {rigid: ['Uniform mass', 'uniform'], irregular: ['Irregular mass', 'irregular'], dynamic_mass: ['Dynamic mass', 'dynamic']};
 const destinations = {static_single: ['Single destination', 'single'], static_multiple: ['Multiple destinations', 'multiple'], moving_target: ['Moving destination', 'moving']};
 const grid = document.querySelector('#gallery-grid');

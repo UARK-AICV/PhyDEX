@@ -21,7 +21,10 @@
 <div class="stage">
 <div class="scene-window">
 <img class="poster" src="assets/poster-motion.webp" alt="A robot arm throwing a cereal box into a wooden tray on a kitchen counter." fetchpriority="high" width="3840" height="2160">
-<video id="scene" muted playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+<video id="scene" muted playsinline preload="auto" disablepictureinpicture aria-hidden="true" data-frame-count="251" data-fps="30">
+<source src="assets/throw-scrub-mobile.mp4" type="video/mp4" media="(max-width: 700px)">
+<source src="assets/throw-scrub.mp4" type="video/mp4">
+</video>
 </div>
 <div class="intro-hint" id="intro-hint" aria-hidden="true"></div>
 <button class="scroll-cue" type="button" aria-label="Scroll down to replay the throw">

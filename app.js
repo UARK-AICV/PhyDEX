@@ -6,7 +6,7 @@ const sceneWindow = document.querySelector('.scene-window');
 const cue = document.querySelector('.scroll-cue');
 const poster = document.querySelector('.poster');
 let opened = false, scheduled = false, desired = 0, displayed = 0;
-let frameCount = 0, fps = 30, seekingFrame = null, ready = false;
+let frameCount = Number(video.dataset.frameCount), fps = Number(video.dataset.fps), seekingFrame = null, ready = false;
 let revealStarted = false;
 async function reveal() {
   if (revealStarted) return;
@@ -87,16 +87,13 @@ function schedule() { if (!scheduled) { scheduled = true; requestAnimationFrame(
 addEventListener('scroll', schedule, {passive:true});
 addEventListener('resize', schedule);
 reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) finishReveal(); schedule(); });
-fetch('assets/playback.json').then(r => { if (!r.ok) throw Error('Playback unavailable'); return r.json(); }).then(data => {
-  frameCount = data.frameCount; fps = data.fps;
-  video.src = matchMedia('(max-width: 700px)').matches
-    ? (data.scrubMobile || data.mobile) : (data.scrub || data.src);
-  video.load();
-  if (reducedMotion.matches) reveal();
-  update();
-}).catch(() => { sequence.classList.add('sequence-unavailable'); reveal(); });
-// A slow connection must not leave visitors staring at black indefinitely.
-setTimeout(reveal, 2500);
+// Reveal the lightweight poster immediately; video loads in parallel from HTML.
+// Handle a cached video that became ready before this deferred script ran.
+if (video.readyState >= 2) {
+  ready = true;
+  video.classList.add('ready');
+}
+reveal();
 const families = {rigid: ['Uniform mass', 'uniform'], irregular: ['Irregular mass', 'irregular'], dynamic_mass: ['Dynamic mass', 'dynamic']};
 const destinations = {static_single: ['Single destination', 'single'], static_multiple: ['Multiple destinations', 'multiple'], moving_target: ['Moving destination', 'moving']};
 const grid = document.querySelector('#gallery-grid');

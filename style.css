@@ -546,3 +546,14 @@ footer{
 .opening-loader span { font-size: 16px; }
 .opening-loader progress { display: block; width: 100%; height: 4px; margin: 16px 0; accent-color: #eee; }
 .opening-loader a { display: inline-block; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Humanoid gallery: same cards as the task gallery. */
+#humanoid { border-top: 1px solid var(--line); }
+#humanoid .gallery-heading p { max-width: 340px; line-height: 1.8; }
+#humanoid .filters { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+#humanoid .gallery-grid { gap: 36px 24px; }
+#humanoid .scene-card figcaption { align-items: center; gap: 12px; margin-top: 16px; }
+#humanoid .scene-card .task-family { font: 400 19px/1.2 Georgia,'Times New Roman',serif; color: var(--ink); }
+#humanoid .scene-card p { display: flex; align-items: center; gap: 8px; font-size: 12px; margin: 3px 0 0; }
+@media (max-width: 1000px) { #humanoid .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { #humanoid .gallery-grid { grid-template-columns: minmax(0,1fr); gap: 28px; } }

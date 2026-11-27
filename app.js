@@ -247,6 +247,41 @@ if (realGrid) {
   }));
 }
 
+// Humanoid gallery: nine expert throws by the G1, three per object family, built like the task gallery.
+const humanoidGrid = document.querySelector('#humanoid-grid');
+if (humanoidGrid) {
+  const throws = [
+    ['rigid', 'uniform-1', 'Can', 'Kitchen 2-5'], ['rigid', 'uniform-2', 'Cereal box', 'Kitchen 4-2'], ['rigid', 'uniform-3', 'Apple', 'Kitchen 5-9'],
+    ['irregular', 'irregular-1', 'Drill', 'Kitchen 6-4'], ['irregular', 'irregular-2', 'Hammer', 'Kitchen 7-6'], ['irregular', 'irregular-3', 'Tea strainer', 'Kitchen 3-7'],
+    ['dynamic_mass', 'dynamic-1', 'Tennis ball tube', 'A loose ball rattles inside'], ['dynamic_mass', 'dynamic-2', 'Lighter', 'The lid swings on its hinge'], ['dynamic_mass', 'dynamic-3', 'Tennis ball tube', 'Kitchen 4-2'],
+  ];
+  throws.forEach(([family, file, object, note], i) => {
+    const base = `assets/humanoid/${file}`;
+    const label = families[family][0];
+    const card = document.createElement('figure');
+    card.className = 'scene-card'; card.dataset.family = family;
+    card.innerHTML = `<div class="task-media"><video muted loop playsinline controls preload="none" poster="${base}.webp" data-src="${base}.mp4" aria-label="${label}, ${object.toLowerCase()} — humanoid throwing demonstration"></video><span class="task-number" aria-hidden="true">${String(i + 1).padStart(2,'0')}</span></div><figcaption><span class="task-family">${label}</span><a class="task-expand" href="${base}.mp4" target="_blank" rel="noopener" aria-label="Open ${label}, ${object.toLowerCase()} video">↗</a></figcaption><p><span class="task-marker" aria-hidden="true"></span>${object} · ${note}</p>`;
+    humanoidGrid.append(card);
+    const clip = card.querySelector('video');
+    clip.addEventListener('pause', () => {
+      if (clip.dataset.visible && !card.hidden && !reducedMotion.matches) clip.dataset.userPaused = '1';
+    });
+    clip.addEventListener('play', () => { delete clip.dataset.userPaused; });
+    taskWatcher.observe(clip);
+  });
+  document.querySelectorAll('[data-humanoid]').forEach(button => button.addEventListener('click', () => {
+    document.querySelectorAll('[data-humanoid]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+    humanoidGrid.querySelectorAll('.scene-card').forEach(card => {
+      card.hidden = button.dataset.humanoid !== 'all' && card.dataset.family !== button.dataset.humanoid;
+      if (card.hidden) card.querySelector('video').pause();
+    });
+  }));
+  reducedMotion.addEventListener('change', () => humanoidGrid.querySelectorAll('video').forEach(clip => {
+    if (reducedMotion.matches) clip.pause();
+    else if (clip.dataset.visible && !clip.closest('.scene-card').hidden && !clip.dataset.userPaused) clip.play().catch(() => {});
+  }));
+}
+
 // Replay each chart on re-entry, without intercepting scrolling.
 const resultCharts = [...document.querySelectorAll('.result-chart')];
 if (resultCharts.length && 'IntersectionObserver' in window) {

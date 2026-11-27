@@ -13,7 +13,7 @@
 <header class="site-header">
 <a class="site-brand" href="#top" aria-label="PhyDEX — back to the opening scene">Phy<span>DEX</span></a>
 <nav class="section-nav" aria-label="Page sections">
-<a href="#overview">Overview</a><a href="#data-creation">Data creation</a><a href="#scenes">Tasks</a><a href="#real">Real world</a><a href="#evaluation">Results</a><a href="#cite">Cite</a>
+<a href="#overview">Overview</a><a href="#data-creation">Data creation</a><a href="#scenes">Tasks</a><a href="#real">Real world</a><a href="#humanoid">Humanoid</a><a href="#evaluation">Results</a><a href="#cite">Cite</a>
 </nav>
 </header>
 <main>
@@ -77,8 +77,9 @@
 </div></section>
 <section id="scenes" class="gallery wrap"><div class="section-top"><span class="eyebrow">01 / TASK GALLERY</span><span class="small">NINE THROWING TASKS</span></div><div class="gallery-heading"><h2>Task gallery.</h2><p>Nine tasks, from grasp to landing. Explore how object properties and destination motion change each throw.</p></div><div class="filters" role="group" aria-label="Filter by object family"><button aria-pressed="true" data-filter="all">All tasks <span>09</span></button><button aria-pressed="false" data-filter="rigid">Uniform mass</button><button aria-pressed="false" data-filter="irregular">Irregular mass</button><button aria-pressed="false" data-filter="dynamic_mass">Dynamic mass</button></div><div id="gallery-grid" class="gallery-grid"></div></section>
 <section id="real" class="real"><div class="wrap"><div class="section-top"><span class="eyebrow">02 / REAL WORLD</span><span class="small">PHYSICAL ROBOT · UNEDITED ROLLOUTS</span></div><div class="gallery-heading"><h2>Real-world experiments.</h2></div><div class="filters real-filters" role="group" aria-label="Object condition"><button aria-pressed="true" data-condition="Normal">Normal</button><button aria-pressed="false" data-condition="Light">Light object</button><button aria-pressed="false" data-condition="CoM">Shifted Center-of-Mass</button></div><div id="real-grid" class="real-grid"></div></div></section>
+<section id="humanoid" class="gallery humanoid wrap"><div class="section-top"><span class="eyebrow">03 / HUMANOID</span><span class="small">UNITREE G1 · NINE THROWS</span></div><div class="gallery-heading"><h2>Humanoid gallery.</h2><p>A Unitree G1 picks each object off a pedestal and throws it into a box in a RoboCasa kitchen. Expert episodes replayed in Isaac Lab and ray traced with Newton.</p></div><div class="filters" role="group" aria-label="Filter humanoid throws by object family"><button aria-pressed="true" data-humanoid="all">All throws <span>09</span></button><button aria-pressed="false" data-humanoid="rigid">Uniform mass</button><button aria-pressed="false" data-humanoid="irregular">Irregular mass</button><button aria-pressed="false" data-humanoid="dynamic_mass">Dynamic mass</button></div><div id="humanoid-grid" class="gallery-grid"></div></section>
 <section id="evaluation" class="evaluation wrap" aria-labelledby="evaluation-title">
-<div class="section-top"><span class="eyebrow">03 / EVALUATION RESULTS</span><span class="small">THREE POLICIES · ONE PHYSICAL CHALLENGE</span></div>
+<div class="section-top"><span class="eyebrow">04 / EVALUATION RESULTS</span><span class="small">THREE POLICIES · ONE PHYSICAL CHALLENGE</span></div>
 <div class="gallery-heading"><h2 id="evaluation-title">How well do<br>current VLAs throw?</h2><p>Success rates from our benchmark and real-world experiments. Explore how performance changes as scene diversity decreases.</p></div>
 <div class="results-grid"><article class="result-chart" id="benchmark-chart" data-maximum="3" aria-labelledby="benchmark-chart-title">
 <h3 id="benchmark-chart-title">Success rate below 3% on the full PhyDEX benchmark.</h3><p class="result-description">Overall average across all nine throwing tasks at full diversity (α = 1).</p>
